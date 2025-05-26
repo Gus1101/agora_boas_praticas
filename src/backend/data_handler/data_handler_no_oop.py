@@ -44,10 +44,10 @@ def load_data(path: Path, file_type: str, dataframe: pd.DataFrame) -> True:
     """
 
     if file_type == "csv":
-        dataframe.to_csv(path)
+        dataframe.to_csv(f"{path}/arquivo.{file_type}")
     
     if file_type == "parquet":
-        dataframe.to_parquet(path)
+        dataframe.to_parquet(f"{path}/arquivo.{file_type}")
 
     return True
 
