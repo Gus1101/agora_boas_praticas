@@ -1,6 +1,16 @@
 #Libs import
 import pandas as pd
+import pandera.pandas as pa
+
+from models.models_data_handler_oop import (
+    SchemaExtractExcelDataOut,
+    SchemaTransformDataIn,
+    SchemaTransformDataOut,
+    SchemaLoadDataIn
+)
+
 from pathlib import Path
+from pandera.typing.pandas import DataFrame
 
 #Code
 class ExcelHandler:
@@ -28,7 +38,8 @@ class ExcelHandler:
 
         return check
 
-    def extract_excel_data(self,path: Path) -> pd.DataFrame:
+    @pa.check_types
+    def extract_excel_data(self,path: Path) -> DataFrame[SchemaExtractExcelDataOut]:
         
         """
         Função utilizada para extrair dados de fonte em excel.
@@ -44,7 +55,8 @@ class ExcelHandler:
 
         return dataframe
     
-    def transform_data(self,dataframe: pd.DataFrame) -> pd.DataFrame:
+    @pa.check_types
+    def transform_data(self,dataframe: DataFrame[SchemaTransformDataIn]) -> DataFrame[SchemaTransformDataOut]:
 
         """
         Função utilizada para transofrmação dos dados de uma dataframe
@@ -59,7 +71,8 @@ class ExcelHandler:
 
         return transformed_dataframe
     
-    def load_data(self,path: Path, file_type: str, dataframe: pd.DataFrame) -> True:
+    @pa.check_types
+    def load_data(self,path: Path, file_type: str, dataframe: DataFrame[SchemaLoadDataIn]) -> True:
 
         """
         Função utilizada para load dos dados em um determinado caminho.
