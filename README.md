@@ -131,4 +131,4 @@ Pipelines de CI/CD garantem a qualidade do código antes de chegar na produção
 
 ## 🧹 Qualidade de Dados
 
-Para validação de dados, utilizamos o **[Pandera](https://pandera.readthedocs.io/)** — ideal para quem trabalha com dataframes (`pandas`).
+Para validação de dados, utilizamos o **[Pandera](https://pandera.readthedocs.io/)** — ideal para quem trabalha com dataframes (`pandas`)
