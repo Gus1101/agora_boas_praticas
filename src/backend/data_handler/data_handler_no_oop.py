@@ -12,7 +12,7 @@ def extract_excel_data(path: Path) -> pd.DataFrame:
     :return: Retorna um dataframe
     """
 
-    dataframe = pd.read_json(path)
+    dataframe = pd.read_excel(path)
 
     return dataframe
 

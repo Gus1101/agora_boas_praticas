@@ -4,7 +4,7 @@ from typing import List, Dict, Any
 from random import randint
 
 #Settings
-fake = Faker("pd-BR")
+fake = Faker("pt-BR")
 
 #Code
 def fake_data_generator(quantity_registers: int) -> List[Dict[str, Any]]:

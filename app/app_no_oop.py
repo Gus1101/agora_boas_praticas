@@ -1,3 +1,8 @@
+#SuperSettings
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 #Libs import
 from src.backend.data_handler.data_handler_no_oop import extract_excel_data, transform_data, load_data
 from pathlib import Path

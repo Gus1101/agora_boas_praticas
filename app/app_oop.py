@@ -1,3 +1,8 @@
+#SuperSettings
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 #Libs Import
 from src.backend.data_handler.data_handler_oop import ExcelHandler
 from pathlib import Path
