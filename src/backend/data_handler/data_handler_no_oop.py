@@ -50,3 +50,9 @@ def load_data(path: Path, file_type: str, dataframe: pd.DataFrame) -> True:
         dataframe.to_parquet(path)
 
     return True
+
+if __name__ == "__main__":
+
+    extract_excel_data()
+    transform_data()
+    load_data()
