@@ -28,3 +28,6 @@ def fake_data_generator(quantity_registers: int) -> List[Dict[str, Any]]:
         data.append(efem)
 
     return data
+
+if __name__ == "__main__":
+    fake_data_generator()
