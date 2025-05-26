@@ -1,5 +1,6 @@
 #Libs Import
 import pytest
+import pandera.pandas as pa
 
 from src.backend.data_handler.data_handler_oop import ExcelHandler
 
