@@ -1,0 +1,32 @@
+site_name: Boas Práticas Ágora
+site_description: Documentação sobre boas práticas de desenvolvimento em projetos de dados
+site_author: Augusto Barbosa
+theme:
+  name: material
+  language: pt-BR
+
+nav:
+  - Início: index.md
+  - Estrutura:
+      - Diretórios: estrutura.md
+      - Dependências: dependencias.md
+  - Desenvolvimento:
+      - OOP: oop.md
+      - Testes: testes.md
+      - CICD: cicd.md
+      - Data Quality: data_quality.md
+  - Code:
+      - Backend:
+        - Fake Data: fake_data_generator.md
+        - Data Handler: data_handler.md
+      - Tests: tests.md
+      - CI Workflow: ci_workflow.md
+      - Models: models.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - codehilite
+  - pymdownx.emoji
+  - pymdownx.superfences
