@@ -37,6 +37,9 @@ class ExcelHandler:
         :return: Retorna um dataframe contendo os dados
         """
 
+        if not isinstance(path, Path):
+            raise TypeError("O paramêtro path deve receber um valor de tipo Path")
+
         dataframe = pd.read_excel(path)
 
         return dataframe

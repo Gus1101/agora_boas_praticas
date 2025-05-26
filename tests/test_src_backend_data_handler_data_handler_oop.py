@@ -2,7 +2,6 @@
 import pytest
 
 from src.backend.data_handler.data_handler_oop import ExcelHandler
-from pathlib import Path
 
 #Tests
 def test_extract_data_excel_path_is_type_path():
